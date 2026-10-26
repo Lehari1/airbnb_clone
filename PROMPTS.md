@@ -66,3 +66,26 @@ Confirm you understand. Then create the skeleton: git init, .gitignore,
 README.md, AGENTS.md (containing ALL rules above), PROMPTS.md,
 docs/originality-log.md. Write no app code yet.
 ```
+
+---
+
+### Prompt 2 — Reconnaissance: Interaction Matrix Specification
+**Timestamp:** 2026-10-26T23:29:03+05:30
+
+```text
+Continue observing the reference. Produce docs/reference-spec.md section
+"Interaction Matrix".
+For each interactive element on the Listing Page, record:
+- Default, hover, active, focus-visible and disabled states (what changes:
+colour, scale, shadow, underline, opacity, cursor).
+- Transition property, duration and easing (estimate from observation and
+computed transition values).
+- Hero images: hover effect, click behaviour.
+- "Show all photos" button: hover/press states.
+- Share and Save actions: behaviour on click.
+- Sticky header / sticky reservation card: when and how they appear or stick.
+- Scroll-triggered animations (reveals, parallax, header changes) with
+trigger offsets.
+- Reservation card and calendar interactions.
+Present as a table: Element | Trigger | Effect | Duration | Easing | Notes
+```
