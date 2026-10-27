@@ -219,3 +219,21 @@ After building, take a screenshot at 1440x900 and compare it with the
 reference screenshot. List differences and fix them before reporting.
 ```
 
+---
+
+### Prompt 9 — Build: Remaining Listing Page Sections & Sticky Reservation Card
+**Timestamp:** 2026-10-27T14:39:38+05:30
+
+```text
+Build the remaining Listing Page sections in order: host and highlights, 
+description, sleeping arrangements, amenities (with "show all" behaviour if 
+the reference has it), calendar/availability, reviews, location/map, host 
+profile, things to know, footer, and the reservation card including its 
+sticky behaviour.
+Follow docs/reference-spec.md exactly, including scroll-triggered effects and 
+hover/focus states. Use semantic landmarks and a correct heading hierarchy.
+After each two sections, screenshot and compare with the reference at the 
+same scroll position. Fix differences before continuing.
+```
+
+
