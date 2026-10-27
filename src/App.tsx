@@ -6,6 +6,8 @@ import { ListingOverview } from './components/listing/ListingOverview/ListingOve
 import { HostSummary } from './components/listing/HostSummary/HostSummary';
 import { HighlightsSection } from './components/listing/HighlightsSection/HighlightsSection';
 import { DescriptionSection } from './components/listing/DescriptionSection/DescriptionSection';
+import { SleepingArrangements } from './components/listing/SleepingArrangements/SleepingArrangements';
+import { AmenitiesSection } from './components/listing/AmenitiesSection/AmenitiesSection';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
 import { listingData } from './data';
@@ -83,6 +85,16 @@ export const App: React.FC = () => {
 
             {/* Section 2: Property Description */}
             <DescriptionSection paragraphs={listingData.description} />
+
+            <Divider spacing="none" />
+
+            {/* Section 3: Sleeping Arrangements */}
+            <SleepingArrangements arrangements={listingData.sleepingArrangements} />
+
+            <Divider spacing="none" />
+
+            {/* Section 4: Amenities */}
+            <AmenitiesSection amenities={listingData.amenities} />
 
             <Divider spacing="none" />
           </div>

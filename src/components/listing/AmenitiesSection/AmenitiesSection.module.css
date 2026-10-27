@@ -1,0 +1,51 @@
+.amenitiesSection {
+  padding: var(--space-32) 0;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-24);
+}
+
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.amenityRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+}
+
+.amenityIcon {
+  color: var(--color-text-dark);
+  flex-shrink: 0;
+}
+
+.showAllButton {
+  border: 1px solid var(--color-border-dark);
+  background-color: var(--color-surface-white);
+  color: var(--color-text-dark);
+  border-radius: var(--radius-sm);
+  padding: 13px 23px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform var(--transition-fast);
+}
+
+.showAllButton:hover {
+  background-color: var(--color-surface-light);
+}
+
+.showAllButton:active {
+  transform: scale(0.98);
+}

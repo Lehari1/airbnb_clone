@@ -1,0 +1,114 @@
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-surface-backdrop);
+  z-index: var(--z-modal-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-40);
+  animation: fadeIn 200ms ease;
+}
+
+.modalContent {
+  background-color: var(--color-surface-white);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 780px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-modal);
+  position: relative;
+  overflow: hidden;
+  animation: scaleUp 250ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.stickyHeader {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-surface-white);
+  padding: var(--space-20) var(--space-24);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border-subtle);
+  z-index: 10;
+}
+
+.closeButton {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-dark);
+  transition: background-color var(--transition-fast);
+}
+
+.closeButton:hover {
+  background-color: var(--color-surface-light);
+}
+
+.scrollBody {
+  padding: var(--space-24) var(--space-32) var(--space-40);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modalTitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-32);
+}
+
+.categoryGroup {
+  margin-bottom: var(--space-32);
+}
+
+.categoryTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-16);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.amenityList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  font-size: var(--font-size-base);
+  color: var(--color-text-dark);
+}
+
+.amenityIcon {
+  color: var(--color-text-dark);
+  flex-shrink: 0;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}

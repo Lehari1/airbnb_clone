@@ -1,0 +1,42 @@
+.sleepingSection {
+  padding: var(--space-32) 0;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-24);
+}
+
+.cardsRow {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.card {
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-24);
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.cardIcon {
+  color: var(--color-text-dark);
+}
+
+.cardTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.cardDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
