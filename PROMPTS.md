@@ -348,4 +348,18 @@ make sure its the same as original see the differnce
 make sure all the pictures in these are of same size 
 ```
 
+---
+
+### Prompt 18 — Production-Scale Architecture Diagram Specification
+**Timestamp:** 2026-10-28T01:32:21+05:30
+
+```text
+Architecture Diagram 
+Submit a high-level architecture diagram for a production-scale vacation-rental marketplace 
+(think Airbnb) alongside your app. The diagram should illustrate your scaling strategy for 
+frontend, backend, storage, search, and deployment. Tools like lucid.app or excalidraw are 
+recommended.
+```
+
+
 
