@@ -17,3 +17,4 @@ export * from './AmenityIcons';
 export * from './RatingIcons';
 export * from './GeneralIcons';
 export * from './SearchHouseIcon';
+export * from './HighlightIcons';

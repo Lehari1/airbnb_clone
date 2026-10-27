@@ -16,6 +16,7 @@ import { ThingsToKnowSection } from './components/listing/ThingsToKnowSection/Th
 import { MoreStaysNearby } from './components/listing/MoreStaysNearby/MoreStaysNearby';
 import { StickyNavHeader } from './components/layout/StickyNavHeader/StickyNavHeader';
 import { SiteFooter } from './components/layout/SiteFooter/SiteFooter';
+import { PromoBanner } from './components/listing/PromoBanner/PromoBanner';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
 import { PhotoTourModal } from './components/photoTour';
@@ -94,7 +95,6 @@ export const App: React.FC = () => {
               totalReviews={listingData.totalReviews}
               isGuestFavourite={listingData.isGuestFavourite}
               onReviewsClick={() => console.log('Reviews clicked')}
-              onClaimDiscount={() => console.log('Discount claimed')}
             />
 
             <Divider spacing="md" />
@@ -126,7 +126,16 @@ export const App: React.FC = () => {
           </div>
 
           {/* Right Column: Sticky Reservation Sidebar */}
-          <div>
+          <div
+            style={{
+              position: 'sticky',
+              top: '104px',
+              alignSelf: 'start',
+              zIndex: 'var(--z-sticky-card)',
+              width: 'var(--reservation-card-width)',
+            }}
+          >
+            <PromoBanner onClaim={() => console.log('Discount claimed')} />
             <ReservationCard
               pricing={listingData.pricing}
               onReserveClick={() => console.log('Reserve clicked')}

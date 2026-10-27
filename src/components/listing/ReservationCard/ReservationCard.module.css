@@ -1,9 +1,5 @@
 .reservationContainer {
-  position: sticky;
-  top: 104px;
-  width: var(--reservation-card-width);
-  margin-left: auto;
-  z-index: var(--z-sticky-card);
+  width: 100%;
 }
 
 .card {
@@ -26,11 +22,14 @@
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .priceUnit {
   font-size: var(--font-size-base);
-  color: var(--color-text-muted);
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-regular);
 }
 
 /* Combined Inputs Box */

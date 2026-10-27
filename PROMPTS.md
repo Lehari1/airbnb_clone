@@ -329,3 +329,13 @@ see in images tje orginal and ,y clone one are totally different proportions mak
 ```text
 make sure u match this with the original 
 ```
+
+---
+
+### Prompt 16 — Overview, Host, Highlights, and Reservation Card Visual Fidelity
+**Timestamp:** 2026-10-27T23:40:57+05:30
+
+```text
+make sure its the same as original see the differnce
+```
+

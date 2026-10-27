@@ -5,12 +5,14 @@ import { ReservationPricing } from '../../../data/types';
 
 export interface ReservationCardProps {
   pricing: ReservationPricing;
+  showBreakdown?: boolean;
   onReserveClick?: () => void;
   onDateClick?: () => void;
 }
 
 export const ReservationCard: React.FC<ReservationCardProps> = ({
   pricing,
+  showBreakdown = false,
   onReserveClick,
   onDateClick,
 }) => {
@@ -232,27 +234,29 @@ export const ReservationCard: React.FC<ReservationCardProps> = ({
         <p className={styles.wontBeChargedNote}>You won’t be charged yet</p>
 
         {/* Price Breakdown */}
-        <div className={styles.breakdownSection}>
-          <div className={styles.breakdownRow}>
-            <span className={styles.breakdownLabel}>
-              ₹{Math.round(pricing.nightlyRate).toLocaleString('en-IN')} x {nights} nights
-            </span>
-            <span>₹{accommodationTotal.toLocaleString('en-IN')}</span>
-          </div>
-          <div className={styles.breakdownRow}>
-            <span className={styles.breakdownLabel}>Cleaning fee</span>
-            <span>₹{cleaningFee.toLocaleString('en-IN')}</span>
-          </div>
-          <div className={styles.breakdownRow}>
-            <span className={styles.breakdownLabel}>Airbnb service fee</span>
-            <span>₹{serviceFee.toLocaleString('en-IN')}</span>
-          </div>
+        {showBreakdown && (
+          <div className={styles.breakdownSection}>
+            <div className={styles.breakdownRow}>
+              <span className={styles.breakdownLabel}>
+                ₹{Math.round(pricing.nightlyRate).toLocaleString('en-IN')} x {nights} nights
+              </span>
+              <span>₹{accommodationTotal.toLocaleString('en-IN')}</span>
+            </div>
+            <div className={styles.breakdownRow}>
+              <span className={styles.breakdownLabel}>Cleaning fee</span>
+              <span>₹{cleaningFee.toLocaleString('en-IN')}</span>
+            </div>
+            <div className={styles.breakdownRow}>
+              <span className={styles.breakdownLabel}>Airbnb service fee</span>
+              <span>₹{serviceFee.toLocaleString('en-IN')}</span>
+            </div>
 
-          <div className={styles.totalRow}>
-            <span>Total before taxes</span>
-            <span>₹{grandTotal.toLocaleString('en-IN')}</span>
+            <div className={styles.totalRow}>
+              <span>Total before taxes</span>
+              <span>₹{grandTotal.toLocaleString('en-IN')}</span>
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Report this listing */}

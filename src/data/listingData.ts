@@ -722,9 +722,10 @@ export const listingData: ListingDetails = {
   totalReviews: 19,
   isGuestFavourite: true,
   description: [
-    'Escape to our tranquil 1BHK luxury serviced apartment nestled in the heart of Candolim, North Goa. Designed for romantic getaways and serene retreats, Mirashya UG10 combines contemporary comfort with bespoke tropical accents.',
-    'Unwind on your expansive private terrace lounge featuring a soothing private hydrotherapy jacuzzi beneath gentle coastal breezes. Indulge in warm ambient lighting, handwoven wicker seating, and lush surrounding flora.',
-    'The property boasts high-speed optical WiFi (up to 150 Mbps), centralized air conditioning, fully equipped gourmet kitchen with modern appliances, a designated work desk, and full access to the gated complex swimming pool, gym, and landscaped courtyards.',
+    '🌴 Plan Your Relaxing Holiday at Amor De Goa by Mirashya Homes! ✨',
+    '1BHK in the heart of Candolim, featuring a private jacuzzi 🛁 for the perfect getaway.',
+    'Enjoy high-speed WiFi 💻, Smart TV 📺, pet-friendly comfort 🐾, and access to a shared pool 🏊‍♂️.',
+    'Just minutes from Candolim Beach 🏖️, popular cafés, restaurants, and nightlife!',
   ],
   sleepingArrangements: [
     {
@@ -755,7 +756,7 @@ export const listingData: ListingDetails = {
   },
   host: {
     name: 'Mirashya Homes',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+    avatarUrl: '/images/host/mirashya-avatar.png',
     isSuperhost: true,
     isVerified: true,
     reviewsCount: 1463,

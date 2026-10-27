@@ -15,13 +15,13 @@ export const HostSummary: React.FC<HostSummaryProps> = ({ host }) => {
           src={host.avatarUrl}
           alt={host.name}
           size="md"
-          isSuperhost={host.isSuperhost}
+          isSuperhost={false}
         />
       </div>
       <div className={styles.hostInfo}>
         <h3 className={styles.hostedByTitle}>Hosted by {host.name}</h3>
         <p className={styles.superhostSubtitle}>
-          {host.isSuperhost ? 'Superhost' : 'Host'} · {host.hostingYears} years hosting
+          {host.hostingYears} years hosting
         </p>
       </div>
     </div>

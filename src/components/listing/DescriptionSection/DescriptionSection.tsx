@@ -11,6 +11,13 @@ export const DescriptionSection: React.FC<DescriptionSectionProps> = ({ paragrap
 
   return (
     <section className={styles.descriptionContainer} aria-label="About this space">
+      <div className={styles.translationBanner} role="note" aria-label="Translation notice">
+        <span>Some info has been automatically translated. </span>
+        <button type="button" className={styles.showOriginalBtn}>
+          Show original
+        </button>
+      </div>
+
       <div className={`${styles.descriptionParagraphs} ${!isExpanded ? styles.clamped : ''}`}>
         {paragraphs.map((p, index) => (
           <p key={index}>{p}</p>

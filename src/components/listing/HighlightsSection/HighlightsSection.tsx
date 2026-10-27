@@ -1,6 +1,10 @@
 import React from 'react';
 import styles from './HighlightsSection.module.css';
-import { WorkspaceIcon, PoolIcon, CheckInIcon } from '../../common/Icons';
+import {
+  OutdoorEntertainmentIcon,
+  CoolingFanIcon,
+  BuildingStaffCheckInIcon,
+} from '../../common/Icons';
 
 export interface HighlightItem {
   icon: React.ReactNode;
@@ -11,19 +15,19 @@ export interface HighlightItem {
 export const HighlightsSection: React.FC = () => {
   const highlights: HighlightItem[] = [
     {
-      icon: <CheckInIcon size={24} />,
+      icon: <OutdoorEntertainmentIcon size={24} />,
+      title: 'Outdoor entertainment',
+      description: 'The pool and alfresco dining are great for summer trips.',
+    },
+    {
+      icon: <CoolingFanIcon size={24} />,
+      title: 'Designed for staying cool',
+      description: 'Beat the heat with the A/C and ceiling fan.',
+    },
+    {
+      icon: <BuildingStaffCheckInIcon size={24} />,
       title: 'Self check-in',
-      description: 'Check yourself in with the keypad.',
-    },
-    {
-      icon: <WorkspaceIcon size={24} />,
-      title: 'Dedicated workspace',
-      description: 'A room with wifi that’s well-suited for working.',
-    },
-    {
-      icon: <PoolIcon size={24} />,
-      title: 'Dive right in',
-      description: 'This is one of the few places in the area with a pool.',
+      description: 'You can check in with the building staff.',
     },
   ];
 

@@ -1,0 +1,72 @@
+.promoCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: 14px 16px;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-24);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.promoTagIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #108a00;
+  flex-shrink: 0;
+}
+
+.promoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.promoTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dark);
+}
+
+.termsLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.termsLink:hover {
+  color: #000000;
+}
+
+.claimButton {
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-surface-light);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.claimButton:hover {
+  background-color: var(--color-surface-white);
+  border-color: var(--color-border-dark);
+}
+
+.claimButton:active {
+  transform: scale(0.96);
+}
