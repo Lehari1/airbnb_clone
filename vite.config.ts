@@ -18,4 +18,10 @@ export default defineConfig({
       localsConvention: 'camelCaseOnly',
     },
   },
+  server: {
+    watch: {
+      ignored: ['**/.reference/**', '**/scripts/**', '**/.git/**'],
+    },
+  },
 });
+

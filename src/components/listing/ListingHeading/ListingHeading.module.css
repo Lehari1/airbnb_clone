@@ -1,9 +1,9 @@
 .headingContainer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  padding-top: var(--space-24);
-  padding-bottom: var(--space-16);
+  align-items: flex-end;
+  padding-top: 44px;
+  padding-bottom: 24px;
 }
 
 .title {
