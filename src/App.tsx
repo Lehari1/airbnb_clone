@@ -3,6 +3,11 @@ import { SiteHeader } from './components/layout/SiteHeader/SiteHeader';
 import { ListingHeading } from './components/listing/ListingHeading/ListingHeading';
 import { HeroPhotoGrid } from './components/listing/HeroPhotoGrid/HeroPhotoGrid';
 import { ListingOverview } from './components/listing/ListingOverview/ListingOverview';
+import { HostSummary } from './components/listing/HostSummary/HostSummary';
+import { HighlightsSection } from './components/listing/HighlightsSection/HighlightsSection';
+import { DescriptionSection } from './components/listing/DescriptionSection/DescriptionSection';
+import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
+import { Divider } from './components/common/Divider/Divider';
 import { listingData } from './data';
 import { useUrlModalState } from './hooks';
 
@@ -41,19 +46,56 @@ export const App: React.FC = () => {
           }
         />
 
-        {/* Property Summary Row ("Entire serviced apartment in Candolim, India", bed/bath line, discount & favourite card) */}
-        <ListingOverview
-          propertyType={listingData.propertyType}
-          guestCapacity={listingData.guestCapacity}
-          bedroomsCount={listingData.bedroomsCount}
-          bedsCount={listingData.bedsCount}
-          bathroomsCount={listingData.bathroomsCount}
-          overallRating={listingData.overallRating}
-          totalReviews={listingData.totalReviews}
-          isGuestFavourite={listingData.isGuestFavourite}
-          onReviewsClick={() => console.log('Reviews clicked')}
-          onClaimDiscount={() => console.log('Discount claimed')}
-        />
+        {/* 2-Column Main Listing Grid */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr var(--reservation-card-width)',
+            gap: '80px',
+            alignItems: 'flex-start',
+            position: 'relative',
+          }}
+        >
+          {/* Left Column: Property Details & Sections */}
+          <div>
+            {/* Property Summary Row */}
+            <ListingOverview
+              propertyType={listingData.propertyType}
+              guestCapacity={listingData.guestCapacity}
+              bedroomsCount={listingData.bedroomsCount}
+              bedsCount={listingData.bedsCount}
+              bathroomsCount={listingData.bathroomsCount}
+              overallRating={listingData.overallRating}
+              totalReviews={listingData.totalReviews}
+              isGuestFavourite={listingData.isGuestFavourite}
+              onReviewsClick={() => console.log('Reviews clicked')}
+              onClaimDiscount={() => console.log('Discount claimed')}
+            />
+
+            <Divider spacing="md" />
+
+            {/* Section 1: Host Summary & Room Highlights */}
+            <HostSummary host={listingData.host} />
+            <Divider spacing="none" />
+            <HighlightsSection />
+
+            <Divider spacing="none" />
+
+            {/* Section 2: Property Description */}
+            <DescriptionSection paragraphs={listingData.description} />
+
+            <Divider spacing="none" />
+          </div>
+
+          {/* Right Column: Sticky Reservation Sidebar */}
+          <div>
+            <ReservationCard
+              pricing={listingData.pricing}
+              onReserveClick={() => console.log('Reserve clicked')}
+              onDateClick={() => console.log('Date clicked')}
+            />
+          </div>
+        </div>
       </main>
 
       {/* Modal State Debug Overlay for verification until Photo Tour view is fully implemented */}

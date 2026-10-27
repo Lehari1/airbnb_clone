@@ -1,0 +1,29 @@
+.hostSummaryContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding: var(--space-24) 0;
+}
+
+.hostAvatar {
+  flex-shrink: 0;
+}
+
+.hostInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hostedByTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  margin: 0;
+}
+
+.superhostSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}

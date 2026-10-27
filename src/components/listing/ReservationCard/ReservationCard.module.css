@@ -1,0 +1,285 @@
+.reservationContainer {
+  position: sticky;
+  top: 104px;
+  width: var(--reservation-card-width);
+  margin-left: auto;
+  align-self: flex-start;
+  z-index: var(--z-sticky-card);
+}
+
+.card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Header: Pricing */
+.cardHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-24);
+}
+
+.priceAmount {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+}
+
+.priceUnit {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+
+/* Combined Inputs Box */
+.inputsBox {
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-16);
+  position: relative;
+}
+
+.dateRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--color-border-medium);
+}
+
+.dateCell {
+  padding: 10px 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-fast);
+}
+
+.dateCell:first-child {
+  border-right: 1px solid var(--color-border-medium);
+}
+
+.dateCell:hover {
+  background-color: var(--color-surface-light);
+}
+
+.inputLabel {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+  letter-spacing: 0.04em;
+}
+
+.inputValue {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+  margin-top: 2px;
+}
+
+/* Guests Selector */
+.guestBox {
+  padding: 10px 12px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.guestBox:hover {
+  background-color: var(--color-surface-light);
+}
+
+.guestText {
+  display: flex;
+  flex-direction: column;
+}
+
+.chevronIcon {
+  color: var(--color-text-dark);
+  transition: transform var(--transition-base);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+/* Guests Popover Dropdown */
+.guestsDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-20);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.guestRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guestTypeTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+}
+
+.guestTypeSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.stepperButton {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-medium);
+  background-color: var(--color-surface-white);
+  color: var(--color-text-dark);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.stepperButton:hover:not(:disabled) {
+  border-color: var(--color-border-dark);
+}
+
+.stepperButton:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.stepperButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--color-border-subtle);
+}
+
+.stepperCount {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  min-width: 16px;
+  text-align: center;
+}
+
+.closeDropdownButton {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-text-dark);
+}
+
+/* Reserve Action */
+.reserveButton {
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-gradient);
+  color: var(--color-text-light);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: filter var(--transition-base), box-shadow var(--transition-base), transform var(--transition-fast);
+}
+
+.reserveButton:hover {
+  filter: brightness(1.04);
+  box-shadow: 0 4px 12px rgba(227, 28, 95, 0.35);
+}
+
+.reserveButton:active {
+  transform: scale(0.98);
+}
+
+.wontBeChargedNote {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-24);
+}
+
+/* Breakdown rows */
+.breakdownSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+}
+
+.breakdownRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdownLabel {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--color-border-subtle);
+  margin-top: var(--space-8);
+}
+
+/* Report listing link */
+.reportLink {
+  margin-top: var(--space-24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.reportLink:hover {
+  color: var(--color-text-dark);
+}

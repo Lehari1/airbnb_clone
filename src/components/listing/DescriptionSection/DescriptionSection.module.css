@@ -1,0 +1,45 @@
+.descriptionContainer {
+  padding: var(--space-32) 0;
+}
+
+.descriptionParagraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-dark);
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.showMoreButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-16);
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  transition: opacity var(--transition-fast);
+}
+
+.showMoreButton:hover {
+  opacity: 0.8;
+}
+
+.chevronIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+}
