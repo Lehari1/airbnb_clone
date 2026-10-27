@@ -200,3 +200,22 @@ No `any`. Small, focused components. Run lint and type-check and fix
 everything. Make a git commit for each logical step. Summarise what was 
 created.
 ```
+
+---
+
+### Prompt 8 — Build: Top of Listing Page (Header, Title, Hero Bento Grid, Summary & Guest Favourite Card)
+**Timestamp:** 2026-10-27T13:32:37+05:30
+
+```text
+Build the top of the Listing Page to match the reference at 1440px: 
+header/nav, title row with Share and Save actions, the 5-image hero grid with 
+"Show all photos" button, and the property summary row ("Entire serviced 
+apartment in Candolim, India", guests/bedrooms/bed/bathroom line, rating or 
+favourite card).
+Match exact spacing, typography, colours, radii and hover states from 
+docs/reference-spec.md. Hero images and the button must open the Photo Tour 
+(wire to the overlay state, even if the overlay is not built yet).
+After building, take a screenshot at 1440x900 and compare it with the 
+reference screenshot. List differences and fix them before reporting.
+```
+
