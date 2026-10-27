@@ -754,23 +754,47 @@ export const listingData: ListingDetails = {
     value: 4.8,
   },
   host: {
-    name: 'Mirashya',
+    name: 'Mirashya Homes',
     avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
     isSuperhost: true,
     isVerified: true,
-    reviewsCount: 142,
-    rating: 4.96,
-    hostingYears: 4,
+    reviewsCount: 1463,
+    rating: 4.68,
+    hostingYears: 2,
     responseRate: '100%',
     responseTime: 'within an hour',
     coHosts: [
       {
-        name: 'Rohit',
-        avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+        name: 'Sharath',
+        avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
       },
       {
-        name: 'Priya',
-        avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+        name: 'Aman Dev Pahwa',
+        avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80',
+      },
+      {
+        name: 'Maria Karen Priyanka',
+        avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80',
+      },
+      {
+        name: 'Simran',
+        avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+      },
+      {
+        name: 'Pallavi',
+        avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80',
+      },
+      {
+        name: 'Sanyukta',
+        avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80',
+      },
+      {
+        name: 'Shruti',
+        avatarUrl: '', // Letter avatar
+      },
+      {
+        name: 'Amisha',
+        avatarUrl: '', // Letter avatar
       },
     ],
   },

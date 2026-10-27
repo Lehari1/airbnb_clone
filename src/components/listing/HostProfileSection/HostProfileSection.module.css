@@ -1,0 +1,217 @@
+.hostProfileSection {
+  padding: 48px 0;
+  width: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 24px 0;
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Host Card on left */
+.hostCard {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle, #EBEBEB);
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatarColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 104px;
+  height: 104px;
+}
+
+.hostAvatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  background-color: #13382C;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  user-select: none;
+}
+
+.badgeVerified {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E61E4D 0%, #D70466 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hostName {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-primary, #222222);
+  margin-top: 12px;
+  line-height: 1.2;
+}
+
+.hostRole {
+  font-size: 14px;
+  color: var(--color-text-secondary, #717171);
+  margin-top: 4px;
+}
+
+.statsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary, #222222);
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-secondary, #717171);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.statDivider {
+  height: 1px;
+  background-color: var(--color-border-subtle, #EBEBEB);
+  width: 100%;
+}
+
+/* Right Column */
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionSubheading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 16px 0;
+}
+
+.coHostsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 16px;
+  column-gap: 24px;
+  margin-bottom: 32px;
+}
+
+.coHostItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coHostAvatarCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+  background-color: #F7F7F7;
+  color: var(--color-text-primary, #222222);
+}
+
+.coHostPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.coHostName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+  line-height: 1.2;
+}
+
+.hostDetailsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.detailRow {
+  font-size: 15px;
+  color: var(--color-text-primary, #222222);
+  line-height: 1.4;
+}
+
+.contactButton {
+  align-self: flex-start;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-text-primary, #222222);
+  border-radius: 8px;
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.contactButton:hover {
+  background-color: var(--color-bg-hover, #F7F7F7);
+}
+
+.contactButton:active {
+  transform: scale(0.98);
+}

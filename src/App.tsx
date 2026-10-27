@@ -10,6 +10,8 @@ import { SleepingArrangements } from './components/listing/SleepingArrangements/
 import { AmenitiesSection } from './components/listing/AmenitiesSection/AmenitiesSection';
 import { CalendarSection } from './components/listing/CalendarSection/CalendarSection';
 import { ReviewsSection } from './components/listing/ReviewsSection/ReviewsSection';
+import { LocationSection } from './components/listing/LocationSection/LocationSection';
+import { HostProfileSection } from './components/listing/HostProfileSection/HostProfileSection';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
 import { listingData } from './data';
@@ -121,6 +123,19 @@ export const App: React.FC = () => {
           totalReviews={listingData.totalReviews}
           ratings={listingData.ratings}
           reviews={listingData.reviews}
+        />
+
+        <Divider spacing="none" />
+
+        {/* Section 7: Location / Map */}
+        <LocationSection location={listingData.location} />
+
+        <Divider spacing="none" />
+
+        {/* Section 8: Host Profile */}
+        <HostProfileSection
+          host={listingData.host}
+          onContactHost={() => console.log('Contact host clicked')}
         />
       </main>
 

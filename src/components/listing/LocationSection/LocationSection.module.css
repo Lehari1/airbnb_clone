@@ -1,0 +1,208 @@
+.locationSection {
+  padding: 48px 0;
+  width: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 12px 0;
+}
+
+.locationTitle {
+  font-size: 16px;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 24px 0;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(108deg, #A2C8D8 0%, #A2C8D8 33%, #E3E9DC 40%, #E3E9DC 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-subtle, #EBEBEB);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Grid texture on land */
+.mapGridLines {
+  position: absolute;
+  top: 0;
+  left: 33%;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+/* Green landmark zones */
+.landmarkZone1 {
+  position: absolute;
+  top: 35%;
+  left: 28%;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #C2D8BA;
+  opacity: 0.85;
+}
+
+.landmarkZone2 {
+  position: absolute;
+  bottom: 22%;
+  right: 25%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #C2D8BA;
+  opacity: 0.85;
+}
+
+/* Center House Pin */
+.centerPinWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.pinRadiusCircle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.pinIconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-text-primary, #222222);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+  transition: transform 150ms ease;
+  cursor: pointer;
+}
+
+.pinIconCircle:hover {
+  transform: scale(1.08);
+}
+
+/* Controls */
+.searchButton {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle, #EBEBEB);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 100ms ease, box-shadow 150ms ease;
+}
+
+.searchButton:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.zoomControls {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-subtle, #EBEBEB);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.zoomButton {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease;
+}
+
+.zoomButton:first-child {
+  border-bottom: 1px solid var(--color-border-subtle, #EBEBEB);
+}
+
+.zoomButton:hover {
+  background-color: var(--color-bg-hover, #F7F7F7);
+}
+
+/* Footer details below map */
+.exactLocationNote {
+  font-size: 14px;
+  color: var(--color-text-primary, #222222);
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.highlightsSubheading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 8px 0;
+}
+
+.highlightsText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 12px 0;
+  max-width: 800px;
+}
+
+.showMoreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.showMoreLink:hover {
+  color: #000000;
+}
