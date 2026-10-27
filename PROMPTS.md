@@ -313,3 +313,10 @@ see make sure they are same the search bar is not in the centre and icon in sear
 ```
 
 ---
+
+### Prompt 14 — Hero Photo Grid Proportions & Crop Fidelity
+**Timestamp:** 2026-10-27T22:53:42+05:30
+
+```text
+see in images tje orginal and ,y clone one are totally different proportions make sure u match that page
+```
