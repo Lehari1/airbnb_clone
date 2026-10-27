@@ -278,5 +278,38 @@ Test: open, navigate through all photos with keys and clicks, hit the
 boundaries, close with Escape and with the close control
 ```
 
+---
 
+### Prompt 12 — Design QA: Full Visual QA Pass & Automated Pixel Diffing
+**Timestamp:** 2026-10-27T18:48:50+05:30
 
+```text
+Run a full visual QA pass.
+1. Write a small script in scripts/visual-diff (Playwright + pixelmatch) that 
+loads the reference URL and my local build at identical viewports, disables 
+CSS animations for static comparison, takes screenshots, and writes diff 
+images to .reference/diffs/. It only screenshots the reference; it must not 
+download or read its code.
+2. For every view and state (listing at several scroll positions, hover 
+states, Photo Tour open, each tab active, Lightbox open, first/last image), 
+compare at 1280, 1440 and 1920.
+3. Produce docs/qa-report.md as a table: View/State | Discrepancy | Severity 
+| Fix applied | Verified.
+4. Check specifically: font rendering and weights, letter-spacing, exact 
+pixel spacing, colours, border radii, shadows, image crops, hover/focus 
+transitions, scroll-trigger offsets, animation timing and easing (compare 
+recordings, not just stills).
+Fix every discrepancy, then rerun. Repeat until differences are 
+imperceptible. Do not stop after one pass. Commit after each round of fixes
+```
+
+---
+
+### Prompt 13 — Header Search Bar Alignment & House Icon Fidelity
+**Timestamp:** 2026-10-27T22:31:49+05:30
+
+```text
+see make sure they are same the search bar is not in the centre and icon in search bar should match exactly
+```
+
+---
