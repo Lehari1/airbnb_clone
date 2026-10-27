@@ -339,3 +339,13 @@ make sure u match this with the original
 make sure its the same as original see the differnce
 ```
 
+---
+
+### Prompt 17 — Lightbox Photo Sizing Uniformity & Sizing Fidelity
+**Timestamp:** 2026-10-28T00:42:58+05:30
+
+```text
+make sure all the pictures in these are of same size 
+```
+
+

@@ -174,13 +174,15 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
         {/* Centered Image Canvas */}
         <div className={styles.imageCanvas}>
-          <img
-            key={`${currentPhoto.id}-${currentIndex}`}
-            src={currentPhoto.url}
-            alt={currentPhoto.alt || currentPhoto.caption || `Photo ${currentIndex + 1} of ${totalPhotos}`}
-            className={`${styles.lightboxImage} ${getImageAnimationClass()}`}
-            draggable={false}
-          />
+          <div className={styles.imageFrame}>
+            <img
+              key={`${currentPhoto.id}-${currentIndex}`}
+              src={currentPhoto.url}
+              alt={currentPhoto.alt || currentPhoto.caption || `Photo ${currentIndex + 1} of ${totalPhotos}`}
+              className={`${styles.lightboxImage} ${getImageAnimationClass()}`}
+              draggable={false}
+            />
+          </div>
         </div>
 
         {/* Next Button */}

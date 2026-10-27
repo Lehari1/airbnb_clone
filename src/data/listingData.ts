@@ -15,7 +15,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'lr1-1',
     category: 'living-room-1',
-    url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/lightbox-living-room.png',
     alt: 'Spacious living room featuring vibrant yellow accent wall, brown sofa, wooden coffee table, and dining set',
     caption: 'Bright living room with plush sofa and dining area',
   },
