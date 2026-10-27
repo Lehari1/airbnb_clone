@@ -17,40 +17,35 @@ const NEARBY_STAYS: NearbyStay[] = [
     title: 'Beautiful Studio with a view to die for',
     price: '₹23,600',
     rating: 4.91,
-    imageUrl:
-      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/stays/stay-1.png',
   },
   {
     id: 'stay-2',
     title: 'NAQAB - 1bhk with private pool',
     price: '₹42,218',
     rating: 4.95,
-    imageUrl:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/stays/stay-2.png',
   },
   {
     id: 'stay-3',
     title: 'Greentique Luxury Flat with plunge pool, Calangute',
     price: '₹44,506',
     rating: 4.94,
-    imageUrl:
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/stays/stay-3.png',
   },
   {
     id: 'stay-4',
     title: 'The Tropical Studio | 5 mins to Beach',
     price: '₹22,824',
     rating: 4.96,
-    imageUrl:
-      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/stays/stay-4.png',
   },
   {
     id: 'stay-5',
     title: 'Luxury Casa Bella 1BHK with plunge pool, Calangute',
     price: '₹39,942',
     rating: 4.95,
-    imageUrl:
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80',
+    imageUrl: '/images/stays/stay-5.png',
   },
   // Page 2
   {

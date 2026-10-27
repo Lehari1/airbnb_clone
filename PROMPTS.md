@@ -320,3 +320,12 @@ see make sure they are same the search bar is not in the centre and icon in sear
 ```text
 see in images tje orginal and ,y clone one are totally different proportions make sure u match that page
 ```
+
+---
+
+### Prompt 15 — More Stays Nearby Carousel Fidelity & Photos
+**Timestamp:** 2026-10-27T23:26:30+05:30
+
+```text
+make sure u match this with the original 
+```
