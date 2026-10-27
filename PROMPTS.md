@@ -147,3 +147,32 @@ role, aria-modal, button labels, image alt text).
 8. prefers-reduced-motion behaviour if observable.
 Then add a final "Accessibility Summary" covering all three views
 ```
+
+---
+
+### Prompt 6 — Planning: Implementation Plan & Architecture Specification
+**Timestamp:** 2026-10-27T12:20:22+05:30
+
+```text
+Using docs/reference-spec.md, write docs/implementation-plan.md and show it 
+as an artifact for approval. Do not write app code.
+Include:
+1. Folder structure and component tree (Header, Hero grid, Summary, 
+Amenities, Reviews, Location, ReservationCard, PhotoTour, Lightbox, shared 
+primitives and icon components).
+2. Design tokens file (colours, typography, spacing, radii, shadows, 
+transitions) derived from the spec.
+3. Data model (TypeScript types and a local data file for listing, photos by 
+category, amenities, reviews, host).
+4. Overlay state strategy: Photo Tour and Lightbox as URL-driven state (hash 
+or query) so back button closes them and they are deep-linkable. State which 
+image/index the Lightbox opens at.
+5. Animation approach (CSS transitions on transform/opacity, easing curves, 
+reduced-motion fallback).
+6. Accessibility plan: focus trap hook, focus restoration, scroll-lock hook, 
+keyboard handlers, ARIA attributes, visible focus styles.
+7. Performance plan: lazy loading, reserved aspect ratios, preloading 
+adjacent lightbox images.
+8. Build order and a definition of done per view.
+Ask me to approve before proceeding.
+```
