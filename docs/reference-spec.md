@@ -365,3 +365,173 @@ High-resolution reference screenshots captured during the reconnaissance phase a
 | [`hero_click_img0.png`](file:///c:/Users/hp/Downloads/airbnb_clone/screenshots/photo-tour/hero_click_img0.png) | Deep linking verification: Hero image 0 click routing to `Living room 2`. |
 | [`hero_click_img1.png`](file:///c:/Users/hp/Downloads/airbnb_clone/screenshots/photo-tour/hero_click_img1.png) | Deep linking verification: Hero image 1 click routing. |
 | [`hero_click_img2.png`](file:///c:/Users/hp/Downloads/airbnb_clone/screenshots/photo-tour/hero_click_img2.png) | Deep linking verification: Hero image 2 click routing to jacuzzi. |
+
+---
+
+## Lightbox Single-Photo Viewer Specification
+
+This section documents the rendered observations, structural layout, animation metrics, interaction mechanics, and accessibility properties of the **Lightbox Single-Photo Viewer** (View 3), reached by clicking any individual photo card inside the Photo Tour overlay.
+
+---
+
+### 1. Open & Close Animations
+
+- **Opening Transition**:
+  - **Type**: Clean zoom-and-fade transition expanding outward from the center / clicked photo origin (`transform: scale(0.96) -> scale(1.0)`, `opacity: 0 -> 1`).
+  - **Backdrop**: Fullscreen opaque solid white (`#FFFFFF`) canvas covering `100vw` by `100vh`, positioned at `z-index: 300`.
+  - **Duration**: `200ms - 250ms`.
+  - **Easing**: `cubic-bezier(0.2, 0, 0, 1)` (smooth deceleration curve).
+  - **Body Scroll Lock**: Retains `overflow: hidden` on `html` and `body`.
+- **Closing Transition**:
+  - **Type**: Zoom-out and fade (`transform: scale(1.0) -> scale(0.96)`, `opacity: 1 -> 0`).
+  - **Duration**: `180ms - 200ms`.
+  - **Easing**: `cubic-bezier(0.32, 1, 0.23, 1)` or `ease-in`.
+  - **View Restoration**: Returns directly to the Photo Tour overlay, preserving the exact scroll position in the photo stream.
+
+---
+
+### 2. Image Sizing & Presentation Rules
+
+- **Container Layout**: Centered flexbox viewport (`display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh; position: relative;`).
+- **Image Constraints**:
+  - `max-width: calc(100vw - 160px)` (leaves 80px horizontal breathing room on left and right for navigation arrow controls).
+  - `max-height: calc(100vh - 160px)` (leaves 80px vertical clearance for top control bar and bottom spacing).
+  - `object-fit: contain` (prevents any image cropping; preserves pristine original aspect ratio).
+  - `border-radius: 0` or subtle `4px` corner softening.
+  - `box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08)`.
+- **Backdrop Colour**: Solid high-key white (`#FFFFFF`), delivering maximum visual clarity consistent with the reference implementation.
+
+---
+
+### 3. Previous & Next Navigation Arrow Controls
+
+- **Position**: Centered vertically along the left and right viewport edges:
+  - Previous Button (`<`): `position: absolute; left: 40px; top: 50%; transform: translateY(-50%); z-index: 10;`.
+  - Next Button (`>`): `position: absolute; right: 40px; top: 50%; transform: translateY(-50%); z-index: 10;`.
+- **Dimensions & Appearance**:
+  - Circular button: `width: 40px; height: 40px; border-radius: 50%;`.
+  - Background: `#FFFFFF`.
+  - Border: `1px solid #DDDDDD`.
+  - Shadow: `0 2px 4px rgba(0, 0, 0, 0.1)`.
+  - Icon: Centered inline SVG chevron (`16px x 16px`, stroke `#222222`, `stroke-width: 2.5`).
+- **States**:
+  - **Hover**: Scale `scale(1.08)`, elevated shadow `0 4px 12px rgba(0, 0, 0, 0.18)`, border-color `#B0B0B0`, cursor `pointer`.
+  - **Active (Press)**: Scale `scale(0.96)`.
+  - **Focus-Visible**: High-contrast outline `2px solid #222222; outline-offset: 2px;`.
+  - **Boundary Disabled State**:
+    - At Photo 1 (`1 of 43`): Previous button is disabled (`opacity: 0.25; cursor: not-allowed; pointer-events: none; border-color: #EBEBEB;`).
+    - At Photo 43 (`43 of 43`): Next button is disabled (`opacity: 0.25; cursor: not-allowed; pointer-events: none; border-color: #EBEBEB;`).
+    - **No Wrap-Around**: Sequential navigation stops cleanly at boundaries without unexpected looping.
+
+---
+
+### 4. Image Switching Transitions
+
+- **Transition Style**: Smooth horizontal crossfade and subtle slide transition:
+  - Advancing Forward (`Next`): Outgoing image fades out with slight leftward drift; incoming image slides in from right (`translateX(20px) -> translateX(0)`, `opacity: 0 -> 1`).
+  - Advancing Backward (`Prev`): Incoming image slides in from left (`translateX(-20px) -> translateX(0)`, `opacity: 0 -> 1`).
+- **Duration**: `200ms`.
+- **Easing**: `cubic-bezier(0.2, 0, 0, 1)`.
+
+---
+
+### 5. Keyboard Navigation & Focus Management
+
+- **Keyboard Shortcuts**:
+  - `ArrowRight`: Navigates to the next photo (`index + 1`).
+  - `ArrowLeft`: Navigates to the previous photo (`index - 1`).
+  - `Escape`: Closes the Lightbox and returns directly to the Photo Tour overlay. Pressing `Escape` a second time from the Photo Tour dismisses the overlay back to the Listing Page.
+- **Tab Sequence (Focus Trap)**:
+  - Keyboard navigation is strictly trapped within the active Lightbox modal dialog.
+  - Cycle order:
+    1. Grid View Button (Top-left, `aria-label="Show all photos"`)
+    2. Close Button (Top-right, `aria-label="Close"`)
+    3. Previous Photo Button (Left edge, `aria-label="Previous photo"`)
+    4. Next Photo Button (Right edge, `aria-label="Next photo"`)
+- **Focus Initialization & Return**:
+  - **On Open**: Focus lands automatically on the Close `✕` button.
+  - **On Close**: Focus returns precisely to the photo thumbnail card inside the Photo Tour overlay that was clicked to open the Lightbox.
+
+---
+
+### 6. Chrome Controls, Captions, & Backdrop Dismissal
+
+- **Top Navigation Bar**:
+  - `height: 64px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; position: absolute; top: 0; left: 0; right: 0; z-index: 20;`.
+  - **Left**: 9-dot grid icon button (`width: 40px; height: 40px; border-radius: 8px; hover: background: #F7F7F7;`). Clicking returns to the Photo Tour overlay.
+  - **Center**: Current room/photo category title (e.g. `Living room 1`, `font-size: 16px; font-weight: 600; color: #222222;`).
+  - **Right**:
+    - Photo Counter: `1 of 43` (`font-size: 14px; font-weight: 500; color: #222222; margin-right: 16px;`).
+    - Close Button: `✕` icon button (`width: 40px; height: 40px; border-radius: 50%; hover: background: #F7F7F7;`).
+- **Click-on-Backdrop Behaviour**:
+  - Clicking on the empty white backdrop outside the image does **NOT** inadvertently close the Lightbox, preventing accidental dismissals during viewing. Dismissal is explicit via the Close `✕` button, Grid button, or `Escape` key.
+- **Scroll Lock**: The entire window document scrolling remains completely locked (`overflow: hidden`).
+
+---
+
+### 7. Accessibility & ARIA Specifications
+
+- **Container Semantics**:
+  - `role="dialog"`
+  - `aria-modal="true"`
+  - `aria-label="Photo viewer"`
+  - `aria-roledescription="carousel"`
+- **Button Semantics**:
+  - Close: `<button type="button" aria-label="Close photo viewer">`
+  - Grid View: `<button type="button" aria-label="Show all photos">`
+  - Previous: `<button type="button" aria-label="Previous photo" aria-disabled="true|false">`
+  - Next: `<button type="button" aria-label="Next photo" aria-disabled="true|false">`
+- **Image Semantics**:
+  - `<img src="..." alt="Photo [X] of 43 - [Room Category]" role="img">`
+- **Live Region**:
+  - A visually hidden aria-live region (`aria-live="polite" aria-atomic="true"`) announces photo changes to screen readers: `"Photo 2 of 43: Living room 1"`.
+
+---
+
+### 8. Reduced Motion Adaptations (`prefers-reduced-motion`)
+
+When `@media (prefers-reduced-motion: reduce)` is detected:
+- Zoom-in / zoom-out transforms are removed (`transform: none`).
+- Crossfade and slide transitions between photos are replaced with immediate instantaneous cuts (`transition: none`).
+- Prev/Next button hover scales are neutralized (`transform: none`).
+
+---
+
+## Comprehensive Accessibility Summary (All 3 Views)
+
+This audit establishes the unified accessibility blueprint across the entire application lifecycle, satisfying WCAG 2.1 Level AA criteria.
+
+### 1. View 1: Main Listing Page
+- **Semantic HTML Landmarks**:
+  - `<header>`: Encloses top branding, search bar, and user profile navigation.
+  - `<nav aria-label="Sections">`: The sticky sub-navigation bar using `role="tablist"` with `role="tab"` links (`aria-selected`, `aria-controls`).
+  - `<main>`: Encloses listing details, photo hero grid, amenities, calendar, reviews, host info, and map.
+  - `<aside aria-label="Reservation">`: Sticky reservation card sidebar containing date inputs, guest selectors, and booking action.
+  - `<footer>`: Property policies, neighborhood links, and copyright metadata.
+- **Headings Structure**: Single `<h1>` for listing title (`Romantic Jacuzzi 1BHK Candolim | Mirashya UG10`), followed by logical `<h2>` section headers (`Where you'll sleep`, `What this place offers`, `Reviews`, `Where you'll be`, `Meet your host`).
+- **Keyboard Navigation**:
+  - Full tab stop accessibility across all buttons, links, calendar date cells, and inputs.
+  - Clear, unclipped focus indicator: `outline: 2px solid #222222; outline-offset: 2px;` via `:focus-visible`.
+- **Form Controls & Steppers**:
+  - Reservation guest steppers feature explicit `aria-label="Decrease adults"`, `aria-label="Increase adults"`, with `aria-live="polite"` announcing updated counts.
+
+### 2. View 2: Photo Tour Overlay
+- **Modal Dialog Pattern**:
+  - `role="dialog"`, `aria-modal="true"`, `aria-label="Photo tour"`.
+  - Body scroll locked (`overflow: hidden`).
+  - Initial focus set to `<` back button upon opening.
+  - Focus trapped within overlay; `Tab` cannot escape to underlying listing page.
+  - Pressing `Escape` closes the overlay and returns focus to the triggering element.
+- **Thumbnail Strip & Sections**:
+  - Thumbnail category buttons use `role="tab"` with `aria-controls="[section-id]"`.
+  - All room section images wrapped in focusable buttons triggering the Lightbox with descriptive labels: `aria-label="View photo 1 of Living room 1 in full screen"`.
+
+### 3. View 3: Lightbox Single-Photo Viewer
+- **Modal Dialog Pattern**:
+  - `role="dialog"`, `aria-modal="true"`, `aria-label="Photo viewer"`.
+  - High-priority focus trap encompassing grid button, close button, prev arrow, and next arrow.
+  - Full keyboard shortcuts: `ArrowLeft` (previous), `ArrowRight` (next), `Escape` (close).
+  - Explicit focus restoration targeting the specific photo thumbnail card in View 2 upon dismissal.
+- **Boundary Semantics**:
+  - `aria-disabled="true"` applied to boundary buttons at Photo 1 and Photo 43.
+  - Live region announcements for photo transitions.
