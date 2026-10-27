@@ -236,4 +236,25 @@ After each two sections, screenshot and compare with the reference at the
 same scroll position. Fix differences before continuing.
 ```
 
+---
+
+### Prompt 10 — Build: Photo Tour Overlay (View 2)
+**Timestamp:** 2026-10-27T16:41:12+05:30
+
+```text
+Build the Photo Tour overlay to match the reference:
+- Open and close animations with the recorded duration and easing.
+- Top thumbnail category bar with active state tracking while scrolling 
+(IntersectionObserver), smooth scroll on tab click with the correct offset.
+- Room sections with headings, subtitle lines and the exact image grid 
+patterns and gaps.
+- Close button, body scroll lock, role="dialog", aria-modal, aria-label.
+- Focus moves into the dialog on open, is trapped, Escape closes, and focus 
+returns to the trigger.
+- Opening from a specific hero image scrolls to or highlights the right 
+section, exactly as the reference does.
+- Clicking any photo opens the Lightbox at that photo.
+Verify with screenshots and a keyboard-only run-through
+```
+
 

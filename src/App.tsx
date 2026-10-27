@@ -18,6 +18,8 @@ import { StickyNavHeader } from './components/layout/StickyNavHeader/StickyNavHe
 import { SiteFooter } from './components/layout/SiteFooter/SiteFooter';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
+import { PhotoTourModal } from './components/photoTour';
+import { LightboxModal } from './components/lightbox';
 import { listingData } from './data';
 import { useUrlModalState } from './hooks';
 
@@ -26,8 +28,11 @@ export const App: React.FC = () => {
     isPhotoTourOpen,
     activeRoomSection,
     activePhotoId,
+    activeLightboxPhotoIndex,
     openPhotoTour,
+    openLightbox,
     closeModal,
+    closeLightbox,
   } = useUrlModalState();
 
   return (
@@ -167,56 +172,28 @@ export const App: React.FC = () => {
       {/* 11. Accessible Semantic Footer */}
       <SiteFooter />
 
-      {/* Modal State Debug Overlay for verification until Photo Tour view is fully implemented */}
-      {isPhotoTourOpen && (
-        <aside
-          role="dialog"
-          aria-modal="true"
-          aria-label="Photo tour overlay active"
-          style={{
-            position: 'fixed',
-            bottom: '24px',
-            right: '24px',
-            backgroundColor: 'var(--color-text-dark)',
-            color: 'var(--color-text-light)',
-            padding: '16px 24px',
-            borderRadius: 'var(--radius-md)',
-            boxShadow: 'var(--shadow-modal)',
-            zIndex: 1000,
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            animation: 'fadeIn 200ms ease',
-          }}
-        >
-          <div>
-            <div style={{ fontWeight: 600, fontSize: '14px' }}>
-              Photo Tour State: Active
-            </div>
-            <div style={{ fontSize: '12px', color: 'var(--color-border-medium)' }}>
-              Section: {activeRoomSection || 'Default (living-room-1)'} | Photo: {activePhotoId || 'hero-0'}
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={closeModal}
-            style={{
-              backgroundColor: 'var(--color-surface-white)',
-              color: 'var(--color-text-dark)',
-              border: 'none',
-              borderRadius: 'var(--radius-sm)',
-              padding: '6px 12px',
-              fontSize: '12px',
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}
-          >
-            Close
-          </button>
-        </aside>
-      )}
+      {/* Photo Tour Modal Overlay (View 2) */}
+      <PhotoTourModal
+        isOpen={isPhotoTourOpen}
+        roomSections={listingData.roomSections}
+        allPhotos={listingData.allPhotos}
+        activeSection={activeRoomSection}
+        activePhotoId={activePhotoId}
+        onClose={closeModal}
+        onPhotoClick={(idx) => openLightbox(idx)}
+      />
+
+      {/* Lightbox Single-Photo Modal (View 3) */}
+      <LightboxModal
+        isOpen={activeLightboxPhotoIndex !== undefined}
+        currentIndex={activeLightboxPhotoIndex ?? 0}
+        photos={listingData.allPhotos}
+        onClose={closeLightbox}
+        onNavigate={(idx) => openLightbox(idx)}
+      />
     </div>
   );
 };
 
 export default App;
+

@@ -13,7 +13,12 @@ export function useFocusTrap(
   initialFocusSelector?: string
 ): void {
   useEffect(() => {
-    if (!active || !containerRef.current) return;
+    if (!active) return;
+
+    // Capture element that had focus before modal was opened to restore it later
+    const previousActiveElement = document.activeElement as HTMLElement | null;
+
+    if (!containerRef.current) return;
 
     const container = containerRef.current;
 
@@ -59,8 +64,13 @@ export function useFocusTrap(
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
+      // Restore focus to triggering element
+      if (previousActiveElement && typeof previousActiveElement.focus === 'function') {
+        previousActiveElement.focus();
+      }
     };
   }, [active, containerRef, initialFocusSelector]);
 }
 
 export default useFocusTrap;
+
