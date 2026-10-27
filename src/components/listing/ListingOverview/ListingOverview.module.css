@@ -1,0 +1,189 @@
+.overviewSection {
+  padding-top: var(--space-32);
+  padding-bottom: var(--space-24);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-32);
+}
+
+.summaryTextContainer {
+  flex: 1;
+}
+
+.propertyTypeTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-dark);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.capacityLine {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-dark);
+  margin-top: var(--space-4);
+  line-height: var(--line-height-normal);
+}
+
+/* Promo discount card on right */
+.promoCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding: 16px 20px;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+}
+
+.promoTagIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #108a00;
+  flex-shrink: 0;
+}
+
+.promoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.promoTitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-dark);
+}
+
+.termsLink {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.termsLink:hover {
+  color: #000000;
+}
+
+.claimButton {
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-surface-white);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.claimButton:hover {
+  background-color: var(--color-surface-light);
+  border-color: var(--color-border-dark);
+}
+
+.claimButton:active {
+  transform: scale(0.96);
+}
+
+/* Guest Favourite / Rating Banner Card */
+.favouriteCard {
+  margin-top: var(--space-24);
+  max-width: 650px;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-surface-white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.favouriteLeft {
+  flex: 1;
+}
+
+.laurelLockup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--color-text-dark);
+}
+
+.favouriteTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.favouriteBadgeTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+}
+
+.favouriteSubtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.favouriteRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-24);
+  border-left: 1px solid var(--color-border-subtle);
+  padding-left: var(--space-24);
+}
+
+.favouriteRatingItem {
+  text-align: center;
+}
+
+.favouriteRatingScore {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+}
+
+.favouriteStars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--color-text-dark);
+  margin-top: 2px;
+}
+
+.favouriteReviewsItem {
+  text-align: center;
+}
+
+.favouriteReviewsCount {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+}
+
+.favouriteReviewsLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.favouriteReviewsLabel:hover {
+  color: var(--color-text-dark);
+}

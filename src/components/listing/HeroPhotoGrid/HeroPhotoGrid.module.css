@@ -1,0 +1,93 @@
+.heroGridContainer {
+  position: relative;
+  width: 100%;
+  height: 410px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Left main photo */
+.mainPhotoContainer {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--color-surface-active);
+}
+
+.mainPhotoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--transition-base);
+}
+
+.mainPhotoContainer:hover img {
+  filter: brightness(0.92);
+}
+
+/* Right 2x2 grid */
+.secondaryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--space-8);
+  height: 100%;
+}
+
+.secondaryPhotoContainer {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--color-surface-active);
+}
+
+.secondaryPhotoContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--transition-base);
+}
+
+.secondaryPhotoContainer:hover img {
+  filter: brightness(0.92);
+}
+
+/* "Show all photos" floating button */
+.showAllPhotosButton {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background-color: var(--color-surface-white);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-sm);
+  padding: 7px 15px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform var(--transition-fast), background-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.showAllPhotosButton:hover {
+  background-color: var(--color-surface-light);
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.showAllPhotosButton:active {
+  transform: scale(0.97);
+  background-color: var(--color-surface-active);
+}

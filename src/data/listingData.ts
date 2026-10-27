@@ -38,7 +38,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'lr2-1',
     category: 'living-room-2',
-    url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/hero-0.jpg',
     alt: 'Expansive private patio lounge with wicker armchairs, slate stone wall, and jacuzzi terrace',
     caption: 'Private covered outdoor lounge and terrace',
     isHero: true,
@@ -47,7 +47,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'lr2-2',
     category: 'living-room-2',
-    url: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/hero-2.jpg',
     alt: 'Closeup of private hydrotherapy jacuzzi with timber surround and soothing hot tub jets',
     caption: 'Private hydrotherapy hot tub on the wooden deck',
     isHero: true,
@@ -56,7 +56,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'lr2-3',
     category: 'living-room-2',
-    url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/hero-1.jpg',
     alt: 'High ceiling atrium corridor connecting indoor living suite with the terrace',
     caption: 'Interior transition to patio terrace',
     isHero: true,
@@ -90,7 +90,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'bed-1',
     category: 'bedroom',
-    url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/hero-3.jpg',
     alt: 'Primary bedroom featuring comfortable double bed, crisp white linens, dark wood flooring, and linen drapes',
     caption: 'Tranquil master bedroom with premium mattress and linens',
     isHero: true,
@@ -161,7 +161,7 @@ export const allPhotos: ListingPhoto[] = [
   {
     id: 'ext-3',
     category: 'exterior',
-    url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+    url: '/images/hero/hero-4.jpg?v=2',
     alt: 'Full architectural facade of Amor De Goa residential building with yellow balconies and terracotta roofing',
     caption: 'Amor De Goa complex architectural facade',
     isHero: true,
