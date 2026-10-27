@@ -257,4 +257,26 @@ section, exactly as the reference does.
 Verify with screenshots and a keyboard-only run-through
 ```
 
+---
+
+### Prompt 11 — Build: Lightbox Single-Photo Viewer (View 3)
+**Timestamp:** 2026-10-27T17:27:51+05:30
+
+```text
+Build the Lightbox:
+- Opens at the clicked photo, matching the recorded open/close animation.
+- Prev/next arrow buttons with the exact size, position, hover and disabled 
+states.
+- Keyboard: Left/Right navigate, Escape closes (returning to the Photo Tour, 
+not the page, if that is what the reference does), Tab is trapped.
+- Image-switch transition identical to the reference.
+- Correct image sizing, backdrop, counter/caption if present.
+- Preload adjacent images. aria-label on arrows, meaningful alt text, focus 
+restoration to the thumbnail that opened it.
+- Respect prefers-reduced-motion.
+Test: open, navigate through all photos with keys and clicks, hit the 
+boundaries, close with Escape and with the close control
+```
+
+
 
