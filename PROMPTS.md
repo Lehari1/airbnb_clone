@@ -89,3 +89,36 @@ trigger offsets.
 - Reservation card and calendar interactions.
 Present as a table: Element | Trigger | Effect | Duration | Easing | Notes
 ```
+
+---
+
+### Prompt 3 — Reconnaissance: Photo Tour Deep Specification & Screenshot Audit
+**Timestamp:** 2026-10-27T00:18:45+05:30
+
+```text
+Open the Photo Tour by clicking "Show all photos" and also by clicking each
+hero image. Observe only.
+Document in docs/reference-spec.md section "Photo Tour":
+1. Opening animation (fade/slide/scale), duration, easing, backdrop, and
+closing animation.
+2. Layout: top thumbnail category bar (labels, thumbnail size, spacing,
+active state), room sections (heading, subtitle/amenities line, image grid
+pattern and gaps), close/back button position.
+3. Behaviour: clicking a thumbnail tab (smooth scroll? offset?), active tab
+changes while scrolling (trigger thresholds), sticky bar behaviour, body
+scroll lock.
+4. Which image opens when each hero image is clicked (does the Photo Tour
+scroll to that image or section?).
+5. Keyboard: Tab order, Escape, focus on open, focus return on close.
+6. Per-section image list with captions and grid layout for each photo group.
+7. Screenshots of every state in screenshots/photo-tour/.
+```
+
+---
+
+### Prompt 4 — Continuation of Photo Tour Reconnaissance
+**Timestamp:** 2026-10-27T11:53:41+05:30
+
+```text
+continue where u have left in the previous prompt
+```
