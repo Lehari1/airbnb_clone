@@ -12,6 +12,10 @@ import { CalendarSection } from './components/listing/CalendarSection/CalendarSe
 import { ReviewsSection } from './components/listing/ReviewsSection/ReviewsSection';
 import { LocationSection } from './components/listing/LocationSection/LocationSection';
 import { HostProfileSection } from './components/listing/HostProfileSection/HostProfileSection';
+import { ThingsToKnowSection } from './components/listing/ThingsToKnowSection/ThingsToKnowSection';
+import { MoreStaysNearby } from './components/listing/MoreStaysNearby/MoreStaysNearby';
+import { StickyNavHeader } from './components/layout/StickyNavHeader/StickyNavHeader';
+import { SiteFooter } from './components/layout/SiteFooter/SiteFooter';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
 import { listingData } from './data';
@@ -28,6 +32,17 @@ export const App: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--color-surface-white)' }}>
+      {/* 0. Sticky Sub-Navigation Header (Revealed when scrollY > 560px) */}
+      <StickyNavHeader
+        priceText="₹28,499 for 5 nights"
+        rating={listingData.overallRating}
+        reviewsCount={listingData.totalReviews}
+        onReserveClick={() => {
+          const el = document.querySelector('aside[aria-label="Reservation widget"]');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }}
+      />
+
       {/* 1. Top Navigation Bar */}
       <SiteHeader
         onSearchClick={() => console.log('Search clicked')}
@@ -137,7 +152,20 @@ export const App: React.FC = () => {
           host={listingData.host}
           onContactHost={() => console.log('Contact host clicked')}
         />
+
+        <Divider spacing="none" />
+
+        {/* Section 9: Things to Know */}
+        <ThingsToKnowSection />
+
+        <Divider spacing="none" />
+
+        {/* Section 10: More Stays Nearby */}
+        <MoreStaysNearby />
       </main>
+
+      {/* 11. Accessible Semantic Footer */}
+      <SiteFooter />
 
       {/* Modal State Debug Overlay for verification until Photo Tour view is fully implemented */}
       {isPhotoTourOpen && (

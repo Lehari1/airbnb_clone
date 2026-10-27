@@ -1,0 +1,68 @@
+.thingsToKnowSection {
+  padding: 48px 0;
+  width: 100%;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 24px 0;
+}
+
+.columnsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconWrapper {
+  color: var(--color-text-primary, #222222);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.columnTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 12px 0;
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--color-text-primary, #222222);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.contentItem {
+  margin: 0;
+}
+
+.learnMoreLink {
+  align-self: flex-start;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.learnMoreLink:hover {
+  color: #000000;
+}

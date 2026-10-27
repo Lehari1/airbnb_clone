@@ -1,0 +1,128 @@
+.staysNearbySection {
+  padding: 48px 0;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pageIndicator {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+}
+
+.arrowButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navArrowBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-default, #DDDDDD);
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.navArrowBtn:hover:not(:disabled) {
+  border-color: var(--color-text-primary, #222222);
+  transform: scale(1.04);
+}
+
+.navArrowBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--color-border-subtle, #EBEBEB);
+}
+
+/* Stays Cards Grid: 5 columns */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.stayCard {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  background-color: #F0F0F0;
+}
+
+.stayImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.stayCard:hover .stayImage {
+  transform: scale(1.04);
+}
+
+.stayTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.stayMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.stayPrice {
+  color: var(--color-text-primary, #222222);
+  font-weight: 500;
+}
+
+.stayRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+}
