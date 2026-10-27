@@ -122,3 +122,28 @@ scroll to that image or section?).
 ```text
 continue where u have left in the previous prompt
 ```
+
+---
+
+### Prompt 5 — Reconnaissance: Lightbox Specification & Full Accessibility Summary
+**Timestamp:** 2026-10-27T12:12:04+05:30
+
+```text
+Open a photo from the Photo Tour to reach the Lightbox. Observe only.
+Document in docs/reference-spec.md section "Lightbox":
+1. Open/close animation (e.g. fade or zoom from the clicked photo), duration, 
+easing.
+2. Image sizing rules (max width/height, object-fit, centering, backdrop 
+colour).
+3. Prev/next arrow buttons: position, size, hover/focus states, disabled 
+state at first/last image, wrap-around or not.
+4. Transition when switching images (slide, crossfade, none), duration, 
+easing.
+5. Keyboard: Left/Right, Escape, Tab behaviour, focus trap, focus return 
+target on close.
+6. Counter or caption presence, click-on-backdrop behaviour, scroll lock.
+7. ARIA roles and labels you can observe in the accessibility tree (dialog 
+role, aria-modal, button labels, image alt text).
+8. prefers-reduced-motion behaviour if observable.
+Then add a final "Accessibility Summary" covering all three views
+```
