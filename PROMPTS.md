@@ -176,3 +176,27 @@ adjacent lightbox images.
 8. Build order and a definition of done per view.
 Ask me to approve before proceeding.
 ```
+
+---
+
+### Prompt 7 — Build: Foundation Scaffolding, Tokens, Primitives, Hooks & Data
+**Timestamp:** 2026-10-27T12:34:42+05:30
+
+```text
+Plan approved. Scaffold the project: Vite + React + TypeScript (strict mode), 
+CSS Modules, ESLint, Prettier.
+Implement:
+1. vite.config with build.sourcemap = false, and vercel.json with an SPA 
+rewrite.
+2. Global styles, font loading (matching the font identified in the spec), 
+and the design-tokens file as CSS custom properties from the spec.
+3. Shared primitives: Button, IconButton, Divider, Avatar, Rating, and an 
+Icon set of my own inline SVG components.
+4. Reusable hooks: useScrollLock, useFocusTrap, useEscapeKey, 
+useReducedMotion.
+5. The typed data file populated from the spec (listing, photos, amenities, 
+reviews).
+No `any`. Small, focused components. Run lint and type-check and fix 
+everything. Make a git commit for each logical step. Summarise what was 
+created.
+```
