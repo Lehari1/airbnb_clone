@@ -37,8 +37,9 @@ export const CommunicationIcon: React.FC<IconProps> = ({ size = 24, color = 'cur
 
 export const LocationIcon: React.FC<IconProps> = ({ size = 24, color = 'currentColor', className, ...props }) => (
   <svg width={size} height={size} viewBox="0 0 32 32" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className={className} {...props}>
-    <path d="M16 2c-5.5 0-10 4.5-10 10 0 7 10 18 10 18s10-11 10-18c0-5.5-4.5-10-10-10z" />
-    <circle cx="16" cy="12" r="3.5" />
+    <path d="M4 8l8-4 8 4 8-4v20l-8 4-8-4-8 4V8z" />
+    <path d="M12 4v20" />
+    <path d="M20 8v20" />
   </svg>
 );
 

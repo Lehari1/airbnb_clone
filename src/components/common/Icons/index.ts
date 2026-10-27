@@ -15,3 +15,4 @@ export * from './ChevronDownIcon';
 export * from './LaurelWreathIcon';
 export * from './AmenityIcons';
 export * from './RatingIcons';
+export * from './GeneralIcons';

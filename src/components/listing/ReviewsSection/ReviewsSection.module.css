@@ -1,0 +1,321 @@
+.reviewsSection {
+  padding: 48px 0;
+  width: 100%;
+}
+
+.crestLockup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.crestRatingRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.wreathLeft {
+  color: var(--color-text-primary, #222222);
+}
+
+.wreathRight {
+  color: var(--color-text-primary, #222222);
+}
+
+.hugeRatingScore {
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: var(--color-text-primary, #222222);
+}
+
+.guestFavouriteTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin: 0 0 8px 0;
+}
+
+.guestFavouriteSubtitle {
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--color-text-secondary, #717171);
+  max-width: 480px;
+  margin: 0 0 12px 0;
+}
+
+.howReviewsWorkLink {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.howReviewsWorkLink:hover {
+  color: #000000;
+}
+
+/* Category Ratings Grid */
+.ratingsGrid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(6, 1fr);
+  margin-bottom: 36px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border-subtle, #EBEBEB);
+}
+
+.categoryColumn {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  border-right: 1px solid var(--color-border-subtle, #EBEBEB);
+}
+
+.categoryColumn:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.categoryColumn:first-child {
+  padding-left: 0;
+}
+
+.categoryTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin-bottom: 8px;
+}
+
+.categoryScore {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  margin-bottom: 12px;
+}
+
+.categoryIcon {
+  color: var(--color-text-primary, #222222);
+  display: flex;
+  align-items: center;
+}
+
+/* Overall rating distribution bars */
+.distributionBars {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.distributionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-secondary, #717171);
+}
+
+.starNumber {
+  width: 10px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.barTrack {
+  flex: 1;
+  height: 4px;
+  background-color: var(--color-border-subtle, #EBEBEB);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background-color: var(--color-text-primary, #222222);
+  border-radius: 2px;
+}
+
+/* Category Filter Pills */
+.filterPillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.filterPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border-default, #DDDDDD);
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.filterPill:hover {
+  background-color: var(--color-bg-hover, #F7F7F7);
+  border-color: var(--color-text-primary, #222222);
+}
+
+.filterPill.active {
+  background-color: #F0F0F0;
+  border-color: var(--color-text-primary, #222222);
+  font-weight: 600;
+}
+
+.pillIcon {
+  font-size: 16px;
+}
+
+.pillCount {
+  color: var(--color-text-secondary, #717171);
+}
+
+/* Reviews Cards Grid */
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 40px;
+  margin-bottom: 36px;
+}
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.avatarCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  background-color: #F7F2EB;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  line-height: 1.2;
+}
+
+.authorTenure {
+  font-size: 14px;
+  color: var(--color-text-secondary, #717171);
+  margin-top: 2px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-text-primary, #222222);
+}
+
+.starsGroup {
+  display: flex;
+  gap: 2px;
+  color: var(--color-text-primary, #222222);
+}
+
+.bulletSeparator {
+  color: var(--color-text-secondary, #717171);
+}
+
+.reviewDate {
+  font-weight: 500;
+  color: var(--color-text-primary, #222222);
+}
+
+.reviewText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary, #222222);
+  margin: 0;
+}
+
+.showMoreBtn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0 0 0;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.showMoreBtn:hover {
+  color: #000000;
+}
+
+.showAllReviewsContainer {
+  margin-top: 16px;
+}
+
+.showAllButton {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-text-primary, #222222);
+  border-radius: 8px;
+  padding: 13px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #222222);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.showAllButton:hover {
+  background-color: var(--color-bg-hover, #F7F7F7);
+}
+
+.showAllButton:active {
+  transform: scale(0.98);
+}

@@ -33,9 +33,9 @@ export const ReservationCard: React.FC<ReservationCardProps> = ({
         {/* Header: Price per night */}
         <div className={styles.cardHeader}>
           <span className={styles.priceAmount}>
-            ₹{Math.round(pricing.nightlyRate).toLocaleString('en-IN')}
+            ₹{Math.round(pricing.nightlyRate * nights).toLocaleString('en-IN')}
           </span>
-          <span className={styles.priceUnit}> night</span>
+          <span className={styles.priceUnit}> for {nights} nights</span>
         </div>
 
         {/* Inputs Box */}
@@ -46,19 +46,19 @@ export const ReservationCard: React.FC<ReservationCardProps> = ({
               type="button"
               className={styles.dateCell}
               onClick={onDateClick}
-              aria-label="Change check-in date: 24 November 2026"
+              aria-label="Change check-in date: 18 October 2026"
             >
               <span className={styles.inputLabel}>Check-in</span>
-              <span className={styles.inputValue}>24/11/2026</span>
+              <span className={styles.inputValue}>10/18/2026</span>
             </button>
             <button
               type="button"
               className={styles.dateCell}
               onClick={onDateClick}
-              aria-label="Change checkout date: 29 November 2026"
+              aria-label="Change checkout date: 23 October 2026"
             >
               <span className={styles.inputLabel}>Checkout</span>
-              <span className={styles.inputValue}>29/11/2026</span>
+              <span className={styles.inputValue}>10/23/2026</span>
             </button>
           </div>
 
@@ -213,6 +213,11 @@ export const ReservationCard: React.FC<ReservationCardProps> = ({
               </button>
             </div>
           )}
+        </div>
+
+        {/* Free Cancellation Notice */}
+        <div className={styles.cancellationNotice}>
+          Free cancellation before <span className={styles.cancellationBold}>17 October</span>
         </div>
 
         {/* Reserve Button */}

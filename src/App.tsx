@@ -8,6 +8,8 @@ import { HighlightsSection } from './components/listing/HighlightsSection/Highli
 import { DescriptionSection } from './components/listing/DescriptionSection/DescriptionSection';
 import { SleepingArrangements } from './components/listing/SleepingArrangements/SleepingArrangements';
 import { AmenitiesSection } from './components/listing/AmenitiesSection/AmenitiesSection';
+import { CalendarSection } from './components/listing/CalendarSection/CalendarSection';
+import { ReviewsSection } from './components/listing/ReviewsSection/ReviewsSection';
 import { ReservationCard } from './components/listing/ReservationCard/ReservationCard';
 import { Divider } from './components/common/Divider/Divider';
 import { listingData } from './data';
@@ -54,7 +56,6 @@ export const App: React.FC = () => {
             display: 'grid',
             gridTemplateColumns: '1fr var(--reservation-card-width)',
             gap: '80px',
-            alignItems: 'flex-start',
             position: 'relative',
           }}
         >
@@ -97,6 +98,9 @@ export const App: React.FC = () => {
             <AmenitiesSection amenities={listingData.amenities} />
 
             <Divider spacing="none" />
+
+            {/* Section 5: Calendar / Availability */}
+            <CalendarSection />
           </div>
 
           {/* Right Column: Sticky Reservation Sidebar */}
@@ -108,6 +112,16 @@ export const App: React.FC = () => {
             />
           </div>
         </div>
+
+        <Divider spacing="none" />
+
+        {/* Section 6: Reviews */}
+        <ReviewsSection
+          overallRating={listingData.overallRating}
+          totalReviews={listingData.totalReviews}
+          ratings={listingData.ratings}
+          reviews={listingData.reviews}
+        />
       </main>
 
       {/* Modal State Debug Overlay for verification until Photo Tour view is fully implemented */}
