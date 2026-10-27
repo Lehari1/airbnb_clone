@@ -6,6 +6,9 @@ node_modules/
 # Production build
 dist/
 dist-ssr/
+*.tsbuildinfo
+vite.config.d.ts
+vite.config.js
 *.local
 
 # Environment variables & secrets
